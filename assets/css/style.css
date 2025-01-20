@@ -1,0 +1,324 @@
+/* Font */
+
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Variables */
+:root {
+  font-family: "Funnel Sans", serif;
+  --c-text: #f8d6bd;
+  --c-brand: #020003c5;
+  --c-brand-light: #fff1dde5;
+  --c-brand-rgb: 251, 110, 230;
+  --c-body: #2f2f2f;
+  --box-shadow: 0 0px 5px 1px rgba(255, 218, 182, 0.8);
+  --transition: all 0.5s ease;
+  --font-base: "Funnel Sans", serif;
+}
+
+/* Reset & Helpers */
+
+body {
+  font-family: var(--font-base);
+  line-height: 1.7;
+  background-color: var(--c-body);
+  color: var(--c-text);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 500;
+}
+.theme-shadow {
+  box-shadow: var(--box-shadow);
+}
+/* Image zoom */
+
+.image-zoom {
+  position: relative;
+  overflow: hidden;
+}
+.image-zoom-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.image-zoom-wrapper img {
+  transition: var(--transition);
+}
+.image-zoom:hover .image-zoom-wrapper img {
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-brand);
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--c-text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-padding {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.text {
+  color: var(--c-text);
+}
+
+/* Navbar */
+.navbar{
+  background-color:black;
+}
+.navbar-brand {
+  font-size: xx-large;
+  font-weight: 900;
+  color: var(--c-text);
+  
+}
+.navbar-brand:hover {
+  color:#ff9572;
+}
+.navbar-brand:focus {
+  color:#ff9572;
+}
+.navbar .nav-link {
+  font-weight: 500;
+  color:#ff9572;
+  
+}
+.navbar-toggler{
+  
+  background-color:#ff9572;
+}
+.navbar .nav-link:hover {
+  color: var(--c-brand-light);
+}
+.navbar .nav-link.active {
+  color: var(--c-brand-light);
+}
+.btn {
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.btn-brand {
+  background-color: var(--c-brand-light);
+  color: var(--c-brand);
+
+  border-radius: 0;
+}
+.btn-brand:hover {
+  border: 0.2px solid var(--c-brand-light);
+  border-radius: 5px;
+}
+.btn-light {
+  border-radius: 0;
+}
+.btn-light:hover {
+  border-radius: 5px;
+  background-color: transparent;
+  color: #f8d6bd;
+}
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/hero_section.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.section-title {
+  margin-bottom: 60px;
+}
+.section-title .line {
+  width: 60px;
+  height: 4px;
+  background-color: var(--c-text);
+  margin: 16px auto 24px;
+}
+.section-title p {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Icon Box */
+.iconBox {
+  width: 70px;
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+  flex: none;
+}
+
+/* Services */
+.services {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.services::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: rgba(var(--c-brand-rgb), 0.2);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: var(--transition);
+}
+.services:hover::after {
+  width: 100%;
+  height: 100%;
+  background: var(--c-brand);
+  z-index: -1;
+}
+.services:hover h5,
+.services p {
+  color: var(--c-brand-light);
+}
+.services:hover .iconBox {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: aliceblue;
+}
+
+/* Counter */
+#counter {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+    url("../images/Happy-Clients.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* Portfolio */
+
+.portfolio-item {
+  box-shadow: var(--box-shadow);
+}
+.portfolio-item .iconBox {
+  /* background-color: var(--c-brand-light); */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.portfolio-item:hover .iconBox {
+  opacity: 1;
+  top: 50%;
+}
+
+/* Reviews */
+
+.review small {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--c-text);
+}
+.review-head {
+  position: relative;
+}
+.review-head::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: -14px;
+  background-color: black;
+  transform: rotate(45deg);
+}
+
+/* Team */
+
+.team-member-content {
+  background-color: var(--c-body);
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  width: calc(100% - 50px);
+  transform: translateX(-50%);
+  padding: 25px;
+  transition: var(--transition);
+  opacity: 0;
+}
+.team-member:hover .team-member-content {
+  opacity: 1;
+  bottom: 25px;
+}
+
+/* Contact us */
+
+#contact {
+  position: relative;
+  z-index: 2;
+}
+
+#contact::after {
+  content: "";
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+    url("../images/Happy-Clients.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#contact .form-control {
+  border-radius: 0;
+  background: transparent;
+  color: var(--c-text);
+}
+#contact .form-control:focus {
+  box-shadow: none;
+  border-color: var(--c-brand-light);
+  color: var(--c-text);
+}
+#contact ::placeholder {
+  color: antiquewhite;
+}
+#blog a {
+  color: white;
+}
+#blog a:hover {
+  scale: 1.2;
+  padding: 5px 20px;
+  background-color: #f8d6bd;
+  color: var(--c-brand);
+  font-weight: 500;
+}
+footer a {
+  color: #f8d6bd;
+  font-size: xx-large;
+}
+footer .line {
+  width: 150px;
+  height: 4px;
+  background-color: var(--c-text);
+  margin: 12px 0;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-top {
+  padding: 100px 0 50px 0;
+}
