@@ -17,11 +17,12 @@
 
 /* Reset & Helpers */
 
-body {
+body,html {
   font-family: var(--font-base);
   line-height: 1.7;
   background-color: var(--c-body);
   color: var(--c-text);
+  overflow-x: hidden;
 }
 h1,
 h2,
